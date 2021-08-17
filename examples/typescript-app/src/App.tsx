@@ -12,6 +12,7 @@ import {
 } from 'stream-chat-react';
 import 'stream-chat-react/dist/css/index.css';
 import './App.css';
+import { SlateTextArea } from './components/SlateTextArea';
 
 const apiKey = process.env.REACT_APP_STREAM_KEY as string;
 const userId = process.env.REACT_APP_USER_ID as string;
@@ -31,13 +32,15 @@ if (process.env.REACT_APP_CHAT_SERVER_ENDPOINT) {
 chatClient.connectUser({ id: userId }, userToken);
 
 const App = () => (
+  // @ts-expect-error
   <Chat client={chatClient} theme={`messaging ${theme}`}>
     <ChannelList filters={filters} sort={sort} options={options} showChannelSearch />
     <Channel>
       <Window>
         <ChannelHeader />
         <MessageList />
-        <MessageInput focus />
+        {/* <MessageInput focus /> */}
+        <MessageInput focus Input={SlateTextArea} />
       </Window>
       <Thread />
     </Channel>
