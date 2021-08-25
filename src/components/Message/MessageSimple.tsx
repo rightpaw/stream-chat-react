@@ -154,10 +154,10 @@ const MessageSimpleWithContext = <
                 <ReactionSelector ref={reactionSelectorRef} />
               )}
             </>
-            {message.attachments && (
+            {message.attachments?.length && !message.quoted_message ? (
               <Attachment actionHandler={handleAction} attachments={message.attachments} />
-            )}
-            {message.text && <MessageText />}
+            ) : null}
+            <MessageText message={message} />
             {message.mml && (
               <MML
                 actionHandler={handleAction}
