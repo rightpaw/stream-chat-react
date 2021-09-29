@@ -225,6 +225,7 @@ const ChatAutoComplete = (props) => {
       placeholder={props.placeholder}
       onChange={props.onChange}
       handleSubmit={props.handleSubmit}
+      skipSubmitOnEnter={props.skipSubmitOnEnter}
       onPaste={props.onPaste}
       value={props.value}
       grow={props.grow}
@@ -253,6 +254,8 @@ ChatAutoComplete.propTypes = {
   onPaste: PropTypes.func,
   /** Function that runs on submit */
   handleSubmit: PropTypes.func,
+  /** Whether to skip calling handleSubmit on enter */
+  skipSubmitOnEnter: PropTypes.bool,
   /** Function that runs on change */
   onChange: PropTypes.func,
   /** Placeholder for the textarea */

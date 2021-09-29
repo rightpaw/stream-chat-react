@@ -727,6 +727,8 @@ export interface MessageInputProps {
   noFiles?: boolean;
   /** Custom error handler, called when file/image uploads fail. */
   errorHandler?: (e: Error, type: string, file: object) => Promise<any> | void;
+
+  skipSubmitOnEnter?: boolean;
 }
 
 export type ImageUpload = {
@@ -1114,6 +1116,7 @@ export interface ChatAutoCompleteProps {
   disableMentions?: boolean;
   value?: string;
   handleSubmit?(event: React.FormEvent): void;
+  skipSubmitOnEnter?: boolean;
   onChange?(event: React.ChangeEventHandler): void;
   placeholder?: string;
   LoadingIndicator?: React.ElementType<LoadingIndicatorProps>;
