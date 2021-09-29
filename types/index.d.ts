@@ -1114,6 +1114,7 @@ export interface ChatAutoCompleteProps {
   disableMentions?: boolean;
   value?: string;
   handleSubmit?(event: React.FormEvent): void;
+  skipSubmitOnEnter?: boolean;
   onChange?(event: React.ChangeEventHandler): void;
   placeholder?: string;
   LoadingIndicator?: React.ElementType<LoadingIndicatorProps>;

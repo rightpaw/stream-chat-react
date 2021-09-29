@@ -7,6 +7,7 @@ import data from 'emoji-mart/data/all.json';
 import React from 'react';
 import * as linkify from 'linkifyjs';
 import { Channel, StreamChat } from 'stream-chat';
+import MobileDetect from 'mobile-detect';
 
 export const emojiSetDef = {
   spriteUrl: 'https://getstream.imgix.net/images/emoji-sprite.png',
@@ -279,3 +280,7 @@ export const checkClientPropType = (propValue, _, componentName) => {
   }
   return null;
 };
+
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+
+export const isMobile = !!mobileDetect.mobile();

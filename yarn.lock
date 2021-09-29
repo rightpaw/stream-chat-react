@@ -1634,6 +1634,13 @@
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.1.tgz#283f669ff76d7b8260df8ab7a4262cc83d988256"
   integrity sha512-fZQQafSREFyuZcdWFAExYjBiCL7AUCdgsk80iO0q4yihYYdcIiH28CcuPTGFgLOCC8RlW49GSQxdHwZP+I7CNg==
 
+"@types/mobile-detect@^1.3.4":
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/@types/mobile-detect/-/mobile-detect-1.3.4.tgz#1c6a7d1115c42e4e8d7388265126bc3609ea6747"
+  integrity sha512-MGBTvT5c7aH8eX6szFYP3dWPryNLt5iGlo31XNaJtt8o6jsg6tjn99eEMq9l8T6cPZymsr+J4Jth8+/G/04ZDw==
+  dependencies:
+    mobile-detect "*"
+
 "@types/node@*":
   version "14.14.10"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.10.tgz#5958a82e41863cfc71f2307b3748e3491ba03785"
@@ -8009,6 +8016,11 @@ mml-react@^0.3.3:
     linkifyjs "^2.1.9"
     react-markdown "^5.0.3"
     react-virtuoso "^0.20.3"
+
+mobile-detect@*, mobile-detect@^1.4.5:
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/mobile-detect/-/mobile-detect-1.4.5.tgz#da393c3c413ca1a9bcdd9ced653c38281c0fb6ad"
+  integrity sha512-yc0LhH6tItlvfLBugVUEtgawwFU2sIe+cSdmRJJCTMZ5GEJyLxNyC/NIOAOGk67Fa8GNpOttO3Xz/1bHpXFD/g==
 
 move-concurrently@^1.0.1:
   version "1.0.1"
