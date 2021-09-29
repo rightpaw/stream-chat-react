@@ -54,6 +54,7 @@ const MessageInputFlat = (props) => {
               commands={messageInput.getCommands()}
               innerRef={messageInput.textareaRef}
               handleSubmit={messageInput.handleSubmit}
+              skipSubmitOnEnter={props.skipSubmitOnEnter}
               onSelectItem={messageInput.onSelectItem}
               onChange={messageInput.handleChange}
               value={messageInput.text}
@@ -158,6 +159,7 @@ MessageInputFlat.propTypes = {
   SendButton: /** @type {PropTypes.Validator<React.FC<import('types').SendButtonProps>>} */ (PropTypes.elementType),
   /** Optional UI component prop to override the default List component that displays suggestions */
   SuggestionList: /** @type {PropTypes.Validator<React.ElementType<import('types').SuggestionListProps>>} */ (PropTypes.elementType),
+  skipSubmitOnEnter: PropTypes.bool,
 };
 
 MessageInputFlat.defaultProps = {

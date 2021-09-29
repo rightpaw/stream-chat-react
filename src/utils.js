@@ -7,7 +7,6 @@ import data from 'emoji-mart/data/all.json';
 import React from 'react';
 import * as linkify from 'linkifyjs';
 import { Channel, StreamChat } from 'stream-chat';
-import MobileDetect from 'mobile-detect';
 
 export const emojiSetDef = {
   spriteUrl: 'https://getstream.imgix.net/images/emoji-sprite.png',

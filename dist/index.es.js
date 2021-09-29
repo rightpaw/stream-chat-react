@@ -9,7 +9,6 @@ import RootReactMarkdown from 'react-markdown';
 import ReactMarkdown from 'react-markdown/with-html';
 import data from 'emoji-mart/data/all.json';
 import { find } from 'linkifyjs';
-import MobileDetect from 'mobile-detect';
 import _regeneratorRuntime from '@babel/runtime/regenerator';
 import _asyncToGenerator from '@babel/runtime/helpers/asyncToGenerator';
 import _classCallCheck from '@babel/runtime/helpers/classCallCheck';
@@ -385,8 +384,6 @@ var checkClientPropType = function checkClientPropType(propValue, _, componentNa
 
   return null;
 };
-var mobileDetect = new MobileDetect(window.navigator.userAgent);
-var isMobile = !!mobileDetect.mobile();
 
 var Cancel = "Cancel";
 var Close = "Close";
@@ -465,464 +462,464 @@ var enTranslations = {
 	"🏙 Attachment...": "🏙 Attachment..."
 };
 
-var Cancel$1 = "Annuleer";
-var Close$1 = "Sluit";
-var Delete$1 = "Verwijder";
-var Delivered$1 = "Afgeleverd";
-var Flag$1 = "Markeer";
-var Mute$1 = "Mute";
-var New$1 = "Nieuwe";
-var Pin$1 = "Pin";
-var Send$1 = "Verstuur";
-var Thread$1 = "Draadje";
-var Unmute$1 = "Unmute";
-var Unpin$1 = "Losmaken";
+var Cancel$1 = "";
+var Close$1 = "";
+var Delete$1 = "";
+var Delivered$1 = "";
+var Flag$1 = "";
+var Mute$1 = "";
+var New$1 = "";
+var Pin$1 = "";
+var Send$1 = "";
+var Thread$1 = "";
+var Unmute$1 = "";
+var Unpin$1 = "";
 var live$1 = "live";
 var nlTranslations = {
-	"1 reply": "1 antwoord",
-	"Attach files": "Bijlage toevoegen",
+	"1 reply": "",
+	"Attach files": "",
 	Cancel: Cancel$1,
 	"Channel Missing": "Kanaal niet gevonden",
 	Close: Close$1,
 	"Commands matching": "Bijpassende opdrachten",
-	"Connection failure, reconnecting now...": "Probleem met de verbinding, opnieuw verbinding maken...",
+	"Connection failure, reconnecting now...": "",
 	Delete: Delete$1,
 	Delivered: Delivered$1,
-	"Edit Message": "Pas bericht aan",
+	"Edit Message": "",
 	"Emoji matching": "Emoji-overeenkomsten",
 	"Empty message...": "Leeg bericht...",
-	"Error adding flag: Either the flag already exist or there is issue with network connection ...": "Fout bij het markeren: of het bericht is al gemarkeerd of er is een probleem met de netwerk verbinding",
-	"Error connecting to chat, refresh the page to try again.": "Fout bij het verbinden, ververs de pagina om nogmaals te proberen",
-	"Error muting a user ...": "Fout bij het muten van de gebruiker",
-	"Error pinning message": "Fout bij vastzetten van bericht",
-	"Error removing message pin": "Fout bij verwijderen van berichtpin",
-	"Error unmuting a user ...": "Fout bij het unmuten van de gebruiker",
-	"Error · Unsent": "Error: · niet verzonden",
-	"Error: {{ errorMessage }}": "Error: {{ errorMessage }}",
+	"Error adding flag: Either the flag already exist or there is issue with network connection ...": "",
+	"Error connecting to chat, refresh the page to try again.": "",
+	"Error muting a user ...": "",
+	"Error pinning message": "",
+	"Error removing message pin": "",
+	"Error unmuting a user ...": "",
+	"Error · Unsent": "",
+	"Error: {{ errorMessage }}": "",
 	Flag: Flag$1,
-	"Message Failed · Click to try again": "Bericht mislukt, klik om het nogmaals te proberen",
+	"Message Failed · Click to try again": "",
 	"Message deleted": "Bericht verwijderd",
-	"Message failed. Click to try again.": "Bericht mislukt, klik om het nogmaals te proberen",
-	"Message has been successfully flagged": "Bericht is succesvol gemarkeerd",
-	"Message pinned": "Bericht vastgezet",
+	"Message failed. Click to try again.": "",
+	"Message has been successfully flagged": "",
+	"Message pinned": "",
 	Mute: Mute$1,
 	New: New$1,
-	"New Messages!": "Nieuwe Berichten!",
+	"New Messages!": "",
 	"Nothing yet...": "Nog niets ...",
-	"Only visible to you": "Alleen zichtbaar voor jou",
-	"Open emoji picker": "Open emojipicker",
+	"Only visible to you": "",
+	"Open emoji picker": "",
 	"People matching": "Mensen die matchen",
-	"Pick your emoji": "Kies je emoji",
+	"Pick your emoji": "",
 	Pin: Pin$1,
-	"Pinned by": "Vastgemaakt door",
+	"Pinned by": "",
 	Send: Send$1,
-	"Sending...": "Aan het verzenden...",
-	"Start of a new thread": "Begin van een nieuwe draadje",
-	"This message was deleted...": "Dit bericht was verwijderd",
+	"Sending...": "",
+	"Start of a new thread": "",
+	"This message was deleted...": "",
 	Thread: Thread$1,
-	"Type your message": "Type je bericht",
+	"Type your message": "",
 	Unmute: Unmute$1,
 	Unpin: Unpin$1,
-	"You have no channels currently": "Er zijn geen chats beschikbaar",
-	"You've reached the maximum number of files": "Je hebt het maximale aantal bestanden bereikt",
+	"You have no channels currently": "",
+	"You've reached the maximum number of files": "",
 	live: live$1,
 	"this content could not be displayed": "Deze inhoud kan niet weergegeven worden",
-	"{{ commaSeparatedUsers }} and {{ lastUser }} are typing...": "{{ commaSeparatedUsers }} en {{ lastUser }} zijn aan het typen ...",
-	"{{ commaSeparatedUsers }} and {{ moreCount }} more": "{{ commaSeparatedUsers }} en {{ moreCount }} meer",
-	"{{ commaSeparatedUsers }}, and {{ lastUser }}": "{{ commaSeparatedUsers }} en {{ lastUser }}",
-	"{{ firstUser }} and {{ secondUser }}": "{{ firstUser }} en {{ secondUser }}",
-	"{{ firstUser }} and {{ secondUser }} are typing...": "{{ firstUser }} en {{ secondUser }} zijn aan het typen ...",
-	"{{ imageCount }} more": "+{{ imageCount }}",
+	"{{ commaSeparatedUsers }} and {{ lastUser }} are typing...": "",
+	"{{ commaSeparatedUsers }} and {{ moreCount }} more": "",
+	"{{ commaSeparatedUsers }}, and {{ lastUser }}": "",
+	"{{ firstUser }} and {{ secondUser }}": "",
+	"{{ firstUser }} and {{ secondUser }} are typing...": "",
+	"{{ imageCount }} more": "",
 	"{{ memberCount }} members": "{{ memberCount }} deelnemers",
-	"{{ replyCount }} replies": "{{ replyCount }} antwoorden",
-	"{{ user }} has been muted": "{{ user }} is muted",
-	"{{ user }} has been unmuted": "{{ user }} is unmuted",
-	"{{ user }} is typing...": "{{ user }} is aan het typen...",
+	"{{ replyCount }} replies": "",
+	"{{ user }} has been muted": "",
+	"{{ user }} has been unmuted": "",
+	"{{ user }} is typing...": "",
 	"{{ watcherCount }} online": "{{ watcherCount }} online",
 	"🏙 Attachment...": "🏙 Bijlage..."
 };
 
-var Cancel$2 = "Отмена";
-var Close$2 = "Закрыть";
-var Delete$2 = "Удалить";
-var Delivered$2 = "Отправлено";
-var Flag$2 = "Пожаловаться";
-var Mute$2 = "Отключить уведомления";
-var New$2 = "Новые";
-var Pin$2 = "Штырь";
-var Send$2 = "Отправить";
-var Thread$2 = "Ветка";
-var Unmute$2 = "Включить уведомления";
-var Unpin$2 = "Открепить";
+var Cancel$2 = "";
+var Close$2 = "";
+var Delete$2 = "";
+var Delivered$2 = "";
+var Flag$2 = "";
+var Mute$2 = "";
+var New$2 = "";
+var Pin$2 = "";
+var Send$2 = "";
+var Thread$2 = "";
+var Unmute$2 = "";
+var Unpin$2 = "";
 var live$2 = "В прямом эфире";
 var ruTranslations = {
-	"1 reply": "1 ответ",
-	"Attach files": "Прикрепить файлы",
+	"1 reply": "",
+	"Attach files": "",
 	Cancel: Cancel$2,
 	"Channel Missing": "Канал не найден",
 	Close: Close$2,
 	"Commands matching": "Соответствие команд",
-	"Connection failure, reconnecting now...": "Ошибка соединения, переподключение...",
+	"Connection failure, reconnecting now...": "",
 	Delete: Delete$2,
 	Delivered: Delivered$2,
-	"Edit Message": "Редактировать сообщение",
+	"Edit Message": "",
 	"Emoji matching": "Соответствие эмодзи",
 	"Empty message...": "Пустое сообщение...",
-	"Error adding flag: Either the flag already exist or there is issue with network connection ...": "Ошибка добавления флага: флаг уже существует или ошибка подключения к сети...",
-	"Error connecting to chat, refresh the page to try again.": "Ошибка подключения к чату, обновите страницу чтобы попробовать снова.",
-	"Error muting a user ...": "Ошибка отключения уведомлений от пользователя...",
-	"Error pinning message": "Сообщение об ошибке при закреплении",
-	"Error removing message pin": "Ошибка при удалении булавки сообщения",
-	"Error unmuting a user ...": "Ошибка включения уведомлений...",
-	"Error · Unsent": "Ошибка · Не отправлено",
-	"Error: {{ errorMessage }}": "Ошибка: {{ errorMessage }}",
+	"Error adding flag: Either the flag already exist or there is issue with network connection ...": "",
+	"Error connecting to chat, refresh the page to try again.": "",
+	"Error muting a user ...": "",
+	"Error pinning message": "",
+	"Error removing message pin": "",
+	"Error unmuting a user ...": "",
+	"Error · Unsent": "",
+	"Error: {{ errorMessage }}": "",
 	Flag: Flag$2,
-	"Message Failed · Click to try again": "Ошибка отправки сообщения · Нажмите чтобы повторить",
+	"Message Failed · Click to try again": "",
 	"Message deleted": "Сообщение удалено",
-	"Message failed. Click to try again.": "Ошибка отправки сообщения · Нажмите чтобы повторить",
-	"Message has been successfully flagged": "Жалоба на сообщение была принята",
-	"Message pinned": "Сообщение закреплено",
+	"Message failed. Click to try again.": "",
+	"Message has been successfully flagged": "",
+	"Message pinned": "",
 	Mute: Mute$2,
 	New: New$2,
-	"New Messages!": "Новые сообщения!",
+	"New Messages!": "",
 	"Nothing yet...": "Пока ничего нет...",
-	"Only visible to you": "Только видно для вас",
-	"Open emoji picker": "Выбрать emoji",
+	"Only visible to you": "",
+	"Open emoji picker": "",
 	"People matching": "Соответствующие люди",
-	"Pick your emoji": "Выберите свой emoji",
+	"Pick your emoji": "",
 	Pin: Pin$2,
-	"Pinned by": "Закреплено",
+	"Pinned by": "",
 	Send: Send$2,
-	"Sending...": "Отправка...",
-	"Start of a new thread": "Начало новой ветки",
-	"This message was deleted...": "Сообщение было удалено...",
+	"Sending...": "",
+	"Start of a new thread": "",
+	"This message was deleted...": "",
 	Thread: Thread$2,
-	"Type your message": "Ваше сообщение",
+	"Type your message": "",
 	Unmute: Unmute$2,
 	Unpin: Unpin$2,
-	"You have no channels currently": "У вас нет каналов в данный момент",
-	"You've reached the maximum number of files": "Вы достигли максимального количества файлов",
+	"You have no channels currently": "",
+	"You've reached the maximum number of files": "",
 	live: live$2,
 	"this content could not be displayed": "Этот контент не может быть отображен в данный момент",
-	"{{ commaSeparatedUsers }} and {{ lastUser }} are typing...": "{{ commaSeparatedUsers }} и {{ lastUser }} пишут...",
-	"{{ commaSeparatedUsers }} and {{ moreCount }} more": "{{ commaSeparatedUsers }} и {{ moreCount }} еще",
-	"{{ commaSeparatedUsers }}, and {{ lastUser }}": "{{ commaSeparatedUsers }} и {{ lastUser }}",
-	"{{ firstUser }} and {{ secondUser }}": "{{ firstUser }} и {{ secondUser }}",
-	"{{ firstUser }} and {{ secondUser }} are typing...": "{{ firstUser }} и {{ secondUser }} пишут...",
-	"{{ imageCount }} more": "Ещё {{ imageCount }}",
+	"{{ commaSeparatedUsers }} and {{ lastUser }} are typing...": "",
+	"{{ commaSeparatedUsers }} and {{ moreCount }} more": "",
+	"{{ commaSeparatedUsers }}, and {{ lastUser }}": "",
+	"{{ firstUser }} and {{ secondUser }}": "",
+	"{{ firstUser }} and {{ secondUser }} are typing...": "",
+	"{{ imageCount }} more": "",
 	"{{ memberCount }} members": "{{ memberCount }} члены",
-	"{{ replyCount }} replies": "{{ replyCount }} ответов",
-	"{{ user }} has been muted": "Вы отписались от уведомлений от {{ user }}",
-	"{{ user }} has been unmuted": "Уведомления от {{ user }} были включены",
-	"{{ user }} is typing...": "{{ user }} пишет...",
+	"{{ replyCount }} replies": "",
+	"{{ user }} has been muted": "",
+	"{{ user }} has been unmuted": "",
+	"{{ user }} is typing...": "",
 	"{{ watcherCount }} online": "{{ watcherCount }} в сети",
 	"🏙 Attachment...": "🏙 Вложение..."
 };
 
-var Cancel$3 = "İptal";
-var Close$3 = "Kapat";
-var Delete$3 = "Sil";
-var Delivered$3 = "İletildi";
-var Flag$3 = "Bayrak";
-var Mute$3 = "Sessiz";
-var New$3 = "Yeni";
-var Pin$3 = "Toplu iğne";
-var Send$3 = "Gönder";
-var Thread$3 = "Konu";
-var Unmute$3 = "Sesini aç";
-var Unpin$3 = "Sabitlemeyi kaldır";
+var Cancel$3 = "";
+var Close$3 = "";
+var Delete$3 = "";
+var Delivered$3 = "";
+var Flag$3 = "";
+var Mute$3 = "";
+var New$3 = "";
+var Pin$3 = "";
+var Send$3 = "";
+var Thread$3 = "";
+var Unmute$3 = "";
+var Unpin$3 = "";
 var live$3 = "canlı";
 var trTranslations = {
-	"1 reply": "1 cevap",
-	"Attach files": "Dosya ekle",
+	"1 reply": "",
+	"Attach files": "",
 	Cancel: Cancel$3,
 	"Channel Missing": "Kanal bulunamıyor",
 	Close: Close$3,
 	"Commands matching": "Eşleşen komutlar",
-	"Connection failure, reconnecting now...": "Bağlantı hatası, tekrar bağlanılıyor...",
+	"Connection failure, reconnecting now...": "",
 	Delete: Delete$3,
 	Delivered: Delivered$3,
-	"Edit Message": "Mesajı Düzenle",
+	"Edit Message": "",
 	"Emoji matching": "Emoji eşleştirme",
 	"Empty message...": "Boş mesaj...",
-	"Error adding flag: Either the flag already exist or there is issue with network connection ...": "Bayraklama hatası: Bayrak zaten var veya bağlantı sorunlu",
-	"Error connecting to chat, refresh the page to try again.": "Bağlantı hatası, sayfayı yenileyip tekrar deneyin.",
-	"Error muting a user ...": "Kullanıcıyı sessize alırken hata oluştu ...",
-	"Error pinning message": "Mesaj sabitlenirken hata oluştu",
-	"Error removing message pin": "Mesaj PIN'i kaldırılırken hata oluştu",
-	"Error unmuting a user ...": "Kullanıcının sesini açarken hata oluştu ...",
-	"Error · Unsent": "Hata · Gönderilemedi",
-	"Error: {{ errorMessage }}": "Hata: {{ errorMessage }}",
+	"Error adding flag: Either the flag already exist or there is issue with network connection ...": "",
+	"Error connecting to chat, refresh the page to try again.": "",
+	"Error muting a user ...": "",
+	"Error pinning message": "",
+	"Error removing message pin": "",
+	"Error unmuting a user ...": "",
+	"Error · Unsent": "",
+	"Error: {{ errorMessage }}": "",
 	Flag: Flag$3,
-	"Message Failed · Click to try again": "Mesaj Başarısız · Tekrar denemek için tıklayın",
+	"Message Failed · Click to try again": "",
 	"Message deleted": "Mesaj silindi",
-	"Message failed. Click to try again.": "Mesaj başarısız oldu. Tekrar denemek için tıklayın",
-	"Message has been successfully flagged": "Mesaj başarıyla bayraklandı",
-	"Message pinned": "Mesaj sabitlendi",
+	"Message failed. Click to try again.": "",
+	"Message has been successfully flagged": "",
+	"Message pinned": "",
 	Mute: Mute$3,
 	New: New$3,
-	"New Messages!": "Yeni Mesajlar!",
+	"New Messages!": "",
 	"Nothing yet...": "Şimdilik hiçbir şey...",
-	"Only visible to you": "Sadece size görünür",
-	"Open emoji picker": "Emoji klavyesini aç",
+	"Only visible to you": "",
+	"Open emoji picker": "",
 	"People matching": "Eşleşen kişiler",
-	"Pick your emoji": "Emoji seçin",
+	"Pick your emoji": "",
 	Pin: Pin$3,
-	"Pinned by": "Sabitleyen",
+	"Pinned by": "",
 	Send: Send$3,
-	"Sending...": "Gönderiliyor...",
-	"Start of a new thread": "Yeni konunun başı",
-	"This message was deleted...": "Bu mesaj silindi",
+	"Sending...": "",
+	"Start of a new thread": "",
+	"This message was deleted...": "",
 	Thread: Thread$3,
-	"Type your message": "Mesajınızı yazın",
+	"Type your message": "",
 	Unmute: Unmute$3,
 	Unpin: Unpin$3,
-	"You have no channels currently": "Henüz kanalınız yok",
-	"You've reached the maximum number of files": "Maksimum dosya sayısına ulaştınız",
+	"You have no channels currently": "",
+	"You've reached the maximum number of files": "",
 	live: live$3,
 	"this content could not be displayed": "bu içerik gösterilemiyor",
-	"{{ commaSeparatedUsers }} and {{ lastUser }} are typing...": "{{ commaSeparatedUsers }} ve {{ lastUser }} yazıyor...",
-	"{{ commaSeparatedUsers }} and {{ moreCount }} more": "{{ commaSeparatedUsers }} ve {{ moreCount }} daha",
-	"{{ commaSeparatedUsers }}, and {{ lastUser }}": "{{ commaSeparatedUsers }}, ve {{ lastUser }}",
-	"{{ firstUser }} and {{ secondUser }}": "{{ firstUser }} ve {{ secondUser }}",
-	"{{ firstUser }} and {{ secondUser }} are typing...": "{{ firstUser }} ve {{ secondUser }} yazıyor...",
-	"{{ imageCount }} more": "{{ imageCount }} adet daha",
+	"{{ commaSeparatedUsers }} and {{ lastUser }} are typing...": "",
+	"{{ commaSeparatedUsers }} and {{ moreCount }} more": "",
+	"{{ commaSeparatedUsers }}, and {{ lastUser }}": "",
+	"{{ firstUser }} and {{ secondUser }}": "",
+	"{{ firstUser }} and {{ secondUser }} are typing...": "",
+	"{{ imageCount }} more": "",
 	"{{ memberCount }} members": "{{ memberCount }} üyeler",
-	"{{ replyCount }} replies": "{{ replyCount }} cevaplar",
-	"{{ user }} has been muted": "{{ user }} sessize alındı",
-	"{{ user }} has been unmuted": "{{ user }} sesi açıldı",
-	"{{ user }} is typing...": "{{ user }} yazıyor...",
+	"{{ replyCount }} replies": "",
+	"{{ user }} has been muted": "",
+	"{{ user }} has been unmuted": "",
+	"{{ user }} is typing...": "",
 	"{{ watcherCount }} online": "{{ watcherCount }} çevrimiçi",
 	"🏙 Attachment...": "🏙 Ek..."
 };
 
-var Cancel$4 = "Annuler";
-var Close$4 = "Fermer";
-var Delete$4 = "Supprimer";
-var Delivered$4 = "Publié";
-var Flag$4 = "Signaler";
-var Mute$4 = "Muet";
-var New$4 = "Nouveaux";
-var Pin$4 = "Épingle";
-var Send$4 = "Envoyer";
-var Thread$4 = "Fil de discussion";
-var Unmute$4 = "Désactiver muet";
-var Unpin$4 = "Détacher";
+var Cancel$4 = "";
+var Close$4 = "";
+var Delete$4 = "";
+var Delivered$4 = "";
+var Flag$4 = "";
+var Mute$4 = "";
+var New$4 = "";
+var Pin$4 = "";
+var Send$4 = "";
+var Thread$4 = "";
+var Unmute$4 = "";
+var Unpin$4 = "";
 var live$4 = "en direct";
 var frTranslations = {
-	"1 reply": "1 réponse",
-	"Attach files": "Pièces jointes",
+	"1 reply": "",
+	"Attach files": "",
 	Cancel: Cancel$4,
 	"Channel Missing": "Canal Manquant",
 	Close: Close$4,
 	"Commands matching": "Correspondance des commandes",
-	"Connection failure, reconnecting now...": "Échec de la connexion, reconnexion en cours...",
+	"Connection failure, reconnecting now...": "",
 	Delete: Delete$4,
 	Delivered: Delivered$4,
-	"Edit Message": "Éditer un message",
+	"Edit Message": "",
 	"Emoji matching": "Correspondance emoji",
 	"Empty message...": "Message vide...",
-	"Error adding flag: Either the flag already exist or there is issue with network connection ...": "Erreur d'ajout du flag : le flag existe déjà ou vous rencontrez un problème de connexion au réseau ...",
-	"Error connecting to chat, refresh the page to try again.": "Erreur de connexion au chat, rafraîchissez la page pour réessayer.",
-	"Error muting a user ...": "Erreur de mise en sourdine d'un utilisateur ...",
-	"Error pinning message": "Erreur d'épinglage du message",
-	"Error removing message pin": "Erreur lors de la suppression du code PIN du message",
-	"Error unmuting a user ...": "Erreur de désactivation de la fonction sourdine pour un utilisateur ...",
-	"Error · Unsent": "Erreur - Non envoyé",
-	"Error: {{ errorMessage }}": "Erreur : {{ errorMessage }}",
+	"Error adding flag: Either the flag already exist or there is issue with network connection ...": "",
+	"Error connecting to chat, refresh the page to try again.": "",
+	"Error muting a user ...": "",
+	"Error pinning message": "",
+	"Error removing message pin": "",
+	"Error unmuting a user ...": "",
+	"Error · Unsent": "",
+	"Error: {{ errorMessage }}": "",
 	Flag: Flag$4,
-	"Message Failed · Click to try again": "Échec de l'envoi du message - Cliquez pour réessayer",
+	"Message Failed · Click to try again": "",
 	"Message deleted": "Message supprimé",
-	"Message failed. Click to try again.": "Échec de l'envoi du message - Cliquez pour réessayer",
-	"Message has been successfully flagged": "Le message a été signalé avec succès",
-	"Message pinned": "Message épinglé",
+	"Message failed. Click to try again.": "",
+	"Message has been successfully flagged": "",
+	"Message pinned": "",
 	Mute: Mute$4,
 	New: New$4,
-	"New Messages!": "Nouveaux Messages!",
+	"New Messages!": "",
 	"Nothing yet...": "Aucun message...",
-	"Only visible to you": "Visible uniquement pour vous",
-	"Open emoji picker": "Ouvrez le sélecteur d'emoji",
+	"Only visible to you": "",
+	"Open emoji picker": "",
 	"People matching": "Correspondance de personnes",
-	"Pick your emoji": "Choisissez votre emoji",
+	"Pick your emoji": "",
 	Pin: Pin$4,
-	"Pinned by": "Épinglé par",
+	"Pinned by": "",
 	Send: Send$4,
-	"Sending...": "Envoi en cours...",
-	"Start of a new thread": "Début d'un nouveau fil de discussion",
-	"This message was deleted...": "Ce message a été supprimé...",
+	"Sending...": "",
+	"Start of a new thread": "",
+	"This message was deleted...": "",
 	Thread: Thread$4,
-	"Type your message": "Saisissez votre message",
+	"Type your message": "",
 	Unmute: Unmute$4,
 	Unpin: Unpin$4,
-	"You have no channels currently": "Vous n'avez actuellement aucun canal",
-	"You've reached the maximum number of files": "Vous avez atteint le nombre maximum de fichiers",
+	"You have no channels currently": "",
+	"You've reached the maximum number of files": "",
 	live: live$4,
 	"this content could not be displayed": "ce contenu n'a pu être affiché",
-	"{{ commaSeparatedUsers }} and {{ lastUser }} are typing...": "{{ commaSeparatedUsers }} et {{ lastUser }} sont en train d'écrire...",
-	"{{ commaSeparatedUsers }} and {{ moreCount }} more": "{{ commaSeparatedUsers }} et {{ moreCount }} autres",
-	"{{ commaSeparatedUsers }}, and {{ lastUser }}": "{{ commaSeparatedUsers }} et {{ lastUser }}",
-	"{{ firstUser }} and {{ secondUser }}": "{{ firstUser }} et {{ secondUser }}",
-	"{{ firstUser }} and {{ secondUser }} are typing...": "{{ firstUser }} et {{ secondUser }} sont en train d'écrire...",
-	"{{ imageCount }} more": "{{ imageCount }} supplémentaires",
+	"{{ commaSeparatedUsers }} and {{ lastUser }} are typing...": "",
+	"{{ commaSeparatedUsers }} and {{ moreCount }} more": "",
+	"{{ commaSeparatedUsers }}, and {{ lastUser }}": "",
+	"{{ firstUser }} and {{ secondUser }}": "",
+	"{{ firstUser }} and {{ secondUser }} are typing...": "",
+	"{{ imageCount }} more": "",
 	"{{ memberCount }} members": "{{ memberCount }} membres",
-	"{{ replyCount }} replies": "{{ replyCount }} réponses",
-	"{{ user }} has been muted": "{{ user }} a été mis en sourdine",
-	"{{ user }} has been unmuted": "{{ user }} n'est plus en sourdine",
-	"{{ user }} is typing...": "{{ user }} est en train d'écrire...",
+	"{{ replyCount }} replies": "",
+	"{{ user }} has been muted": "",
+	"{{ user }} has been unmuted": "",
+	"{{ user }} is typing...": "",
 	"{{ watcherCount }} online": "{{ watcherCount }} en ligne",
 	"🏙 Attachment...": "🏙 Pièce jointe..."
 };
 
-var Cancel$5 = "रद्द करें";
-var Close$5 = "बंद करे";
-var Delete$5 = "डिलीट";
-var Delivered$5 = "पहुंच गया";
-var Flag$5 = "फ्लैग करे";
-var Mute$5 = "म्यूट करे";
-var New$5 = "नए";
-var Pin$5 = "पिन";
-var Send$5 = "भेजे";
-var Thread$5 = "रिप्लाई थ्रेड";
-var Unmute$5 = "अनम्यूट";
-var Unpin$5 = "अनपिन";
+var Cancel$5 = "";
+var Close$5 = "";
+var Delete$5 = "";
+var Delivered$5 = "";
+var Flag$5 = "";
+var Mute$5 = "";
+var New$5 = "";
+var Pin$5 = "";
+var Send$5 = "";
+var Thread$5 = "";
+var Unmute$5 = "";
+var Unpin$5 = "";
 var live$5 = "लाइव";
 var hiTranslations = {
-	"1 reply": "1 रिप्लाई",
-	"Attach files": "फाइल्स अटैच करे",
+	"1 reply": "",
+	"Attach files": "",
 	Cancel: Cancel$5,
 	"Channel Missing": "चैनल उपलब्ध नहीं है",
 	Close: Close$5,
 	"Commands matching": "मेल खाती है",
-	"Connection failure, reconnecting now...": "कनेक्शन विफल रहा, अब पुनः कनेक्ट हो रहा है ...",
+	"Connection failure, reconnecting now...": "",
 	Delete: Delete$5,
 	Delivered: Delivered$5,
-	"Edit Message": "मैसेज में बदलाव करे",
+	"Edit Message": "",
 	"Emoji matching": "इमोजी मिलान",
 	"Empty message...": "खाली संदेश ...",
-	"Error adding flag: Either the flag already exist or there is issue with network connection ...": "फ़ैल: या तो यह मैसेज के ऊपर पहले से फ्लैग है या तो आपके इंटरनेट कनेक्शन में कुछ परेशानी है",
-	"Error connecting to chat, refresh the page to try again.": "चैट से कनेक्ट करने में त्रुटि, पेज को रिफ्रेश करें",
-	"Error muting a user ...": "यूजर को म्यूट करने का प्रयास फेल हुआ",
-	"Error pinning message": "संदेश को पिन करने में त्रुटि",
-	"Error removing message pin": "संदेश पिन निकालने में त्रुटि",
-	"Error unmuting a user ...": "यूजर को अनम्यूट करने का प्रयास फेल हुआ",
-	"Error · Unsent": "फेल",
-	"Error: {{ errorMessage }}": "फेल: {{ errorMessage }}",
+	"Error adding flag: Either the flag already exist or there is issue with network connection ...": "",
+	"Error connecting to chat, refresh the page to try again.": "",
+	"Error muting a user ...": "",
+	"Error pinning message": "",
+	"Error removing message pin": "",
+	"Error unmuting a user ...": "",
+	"Error · Unsent": "",
+	"Error: {{ errorMessage }}": "",
 	Flag: Flag$5,
-	"Message Failed · Click to try again": "मैसेज फ़ैल - पुनः कोशिश करें",
+	"Message Failed · Click to try again": "",
 	"Message deleted": "मैसेज हटा दिया गया",
-	"Message failed. Click to try again.": "मैसेज फ़ैल - पुनः कोशिश करें",
-	"Message has been successfully flagged": "मैसेज को फ्लैग कर दिया गया है",
-	"Message pinned": "संदेश पिन किया गया",
+	"Message failed. Click to try again.": "",
+	"Message has been successfully flagged": "",
+	"Message pinned": "",
 	Mute: Mute$5,
 	New: New$5,
-	"New Messages!": "नए मैसेज!",
+	"New Messages!": "",
 	"Nothing yet...": "कोई मैसेज नहीं है",
-	"Only visible to you": "सिर्फ आपको दिखाई दे रहा है",
-	"Open emoji picker": "इमोजी पिकर खोलिये",
+	"Only visible to you": "",
+	"Open emoji picker": "",
 	"People matching": "मेल खाते लोग",
-	"Pick your emoji": "इमोजी चूस करे",
+	"Pick your emoji": "",
 	Pin: Pin$5,
-	"Pinned by": "द्वारा पिन किया गया",
+	"Pinned by": "",
 	Send: Send$5,
-	"Sending...": "भेजा जा रहा है",
-	"Start of a new thread": "एक नए थ्रेड की शुरुआत",
-	"This message was deleted...": "मैसेज हटा दिया गया",
+	"Sending...": "",
+	"Start of a new thread": "",
+	"This message was deleted...": "",
 	Thread: Thread$5,
-	"Type your message": "अपना मैसेज लिखे",
+	"Type your message": "",
 	Unmute: Unmute$5,
 	Unpin: Unpin$5,
-	"You have no channels currently": "आपके पास कोई चैनल नहीं है",
-	"You've reached the maximum number of files": "आप अधिकतम फ़ाइलों तक पहुँच गए हैं",
+	"You have no channels currently": "",
+	"You've reached the maximum number of files": "",
 	live: live$5,
 	"this content could not be displayed": "यह कॉन्टेंट लोड नहीं हो पाया",
-	"{{ commaSeparatedUsers }} and {{ lastUser }} are typing...": "{{ commaSeparatedUsers }} और {{ lastUser }} टाइप कर रहे हैं...",
-	"{{ commaSeparatedUsers }} and {{ moreCount }} more": "{{ commaSeparatedUsers }} और {{ moreCount }} और",
-	"{{ commaSeparatedUsers }}, and {{ lastUser }}": "{{ commaSeparatedUsers }} और {{ lastUser }}",
-	"{{ firstUser }} and {{ secondUser }}": "{{ firstUser }} और {{ secondUser }}",
-	"{{ firstUser }} and {{ secondUser }} are typing...": "{{ firstUser }} और {{ secondUser }} टाइप कर रहे हैं...",
-	"{{ imageCount }} more": "{{ imageCount }} और",
+	"{{ commaSeparatedUsers }} and {{ lastUser }} are typing...": "",
+	"{{ commaSeparatedUsers }} and {{ moreCount }} more": "",
+	"{{ commaSeparatedUsers }}, and {{ lastUser }}": "",
+	"{{ firstUser }} and {{ secondUser }}": "",
+	"{{ firstUser }} and {{ secondUser }} are typing...": "",
+	"{{ imageCount }} more": "",
 	"{{ memberCount }} members": "{{ memberCount }} मेंबर्स",
-	"{{ replyCount }} replies": "{{ replyCount }} रिप्लाई",
-	"{{ user }} has been muted": "{{ user }} को म्यूट कर दिया गया है",
-	"{{ user }} has been unmuted": "{{ user }} को अनम्यूट कर दिया गया है",
-	"{{ user }} is typing...": "{{ user }} टाइप कर रहा है...",
+	"{{ replyCount }} replies": "",
+	"{{ user }} has been muted": "",
+	"{{ user }} has been unmuted": "",
+	"{{ user }} is typing...": "",
 	"{{ watcherCount }} online": "{{ watcherCount }} online",
 	"🏙 Attachment...": "🏙 अटैचमेंट"
 };
 
-var Cancel$6 = "Annulla";
-var Close$6 = "Chiudi";
-var Delete$6 = "Cancella";
-var Delivered$6 = "Consegnato";
-var Flag$6 = "Segnala";
-var Mute$6 = "Silenzia";
-var New$6 = "Nuovo";
-var Pin$6 = "Pin";
-var Send$6 = "Invia";
-var Thread$6 = "Thread";
-var Unmute$6 = "Riattiva le notifiche";
-var Unpin$6 = "Sblocca";
+var Cancel$6 = "";
+var Close$6 = "";
+var Delete$6 = "";
+var Delivered$6 = "";
+var Flag$6 = "";
+var Mute$6 = "";
+var New$6 = "";
+var Pin$6 = "";
+var Send$6 = "";
+var Thread$6 = "";
+var Unmute$6 = "";
+var Unpin$6 = "";
 var live$6 = "live";
 var itTranslations = {
-	"1 reply": "Una risposta",
-	"Attach files": "Allega file",
+	"1 reply": "",
+	"Attach files": "",
 	Cancel: Cancel$6,
 	"Channel Missing": "Il canale non esiste",
 	Close: Close$6,
 	"Commands matching": "Comandi corrispondenti",
-	"Connection failure, reconnecting now...": "Connessione fallitta, riconnessione in corso...",
+	"Connection failure, reconnecting now...": "",
 	Delete: Delete$6,
 	Delivered: Delivered$6,
-	"Edit Message": "Modifica messaggio",
+	"Edit Message": "",
 	"Emoji matching": "Abbinamento emoji",
 	"Empty message...": "Message vuoto...",
-	"Error adding flag: Either the flag already exist or there is issue with network connection ...": "Errore durante la segnalazione: la segnalazione esiste giá o c'é un problema di connessione ...",
-	"Error connecting to chat, refresh the page to try again.": "Errore di connessione alla chat, aggiorna la pagina per riprovare",
-	"Error muting a user ...": "Errore silenziando un utente ...",
-	"Error pinning message": "Errore durante il blocco del messaggio",
-	"Error removing message pin": "Errore durante la rimozione del PIN del messaggio",
-	"Error unmuting a user ...": "Errore riattivando le notifiche per l'utente ...",
-	"Error · Unsent": "Errore · Non inviato",
-	"Error: {{ errorMessage }}": "Errore: {{ errorMessage }}",
+	"Error adding flag: Either the flag already exist or there is issue with network connection ...": "",
+	"Error connecting to chat, refresh the page to try again.": "",
+	"Error muting a user ...": "",
+	"Error pinning message": "",
+	"Error removing message pin": "",
+	"Error unmuting a user ...": "",
+	"Error · Unsent": "",
+	"Error: {{ errorMessage }}": "",
 	Flag: Flag$6,
-	"Message Failed · Click to try again": "Invio messaggio fallito · Clicca per riprovare",
+	"Message Failed · Click to try again": "",
 	"Message deleted": "Messaggio cancellato",
-	"Message failed. Click to try again.": "Invio messaggio fallito. Clicca per riprovare.",
-	"Message has been successfully flagged": "Il messaggio é stato segnalato con successo",
-	"Message pinned": "Messaggio bloccato",
+	"Message failed. Click to try again.": "",
+	"Message has been successfully flagged": "",
+	"Message pinned": "",
 	Mute: Mute$6,
 	New: New$6,
-	"New Messages!": "Nuovo messaggio!",
+	"New Messages!": "",
 	"Nothing yet...": "Ancora niente...",
-	"Only visible to you": "Visibile soltanto da te",
-	"Open emoji picker": "Apri il selettore dellle emoji",
+	"Only visible to you": "",
+	"Open emoji picker": "",
 	"People matching": "Persone che corrispondono",
-	"Pick your emoji": "Scegli la tua emoji",
+	"Pick your emoji": "",
 	Pin: Pin$6,
-	"Pinned by": "Appuntato da",
+	"Pinned by": "",
 	Send: Send$6,
-	"Sending...": "Invio in corso...",
-	"Start of a new thread": "Inizia un nuovo thread",
-	"This message was deleted...": "Questo messaggio é stato cancellato",
+	"Sending...": "",
+	"Start of a new thread": "",
+	"This message was deleted...": "",
 	Thread: Thread$6,
-	"Type your message": "Scrivi il tuo messaggio",
+	"Type your message": "",
 	Unmute: Unmute$6,
 	Unpin: Unpin$6,
-	"You have no channels currently": "Al momento non sono presenti canali",
-	"You've reached the maximum number of files": "Hai raggiunto il numero massimo di file",
+	"You have no channels currently": "",
+	"You've reached the maximum number of files": "",
 	live: live$6,
 	"this content could not be displayed": "questo contenuto non puó essere mostrato",
-	"{{ commaSeparatedUsers }} and {{ lastUser }} are typing...": "{{ commaSeparatedUsers }} e {{ lastUser }} stanno scrivendo...",
-	"{{ commaSeparatedUsers }} and {{ moreCount }} more": "{{ commaSeparatedUsers }} e altri {{ moreCount }}",
-	"{{ commaSeparatedUsers }}, and {{ lastUser }}": "{{ commaSeparatedUsers }} e {{ lastUser }}",
-	"{{ firstUser }} and {{ secondUser }}": "{{ firstUser }} e {{ secondUser }}",
-	"{{ firstUser }} and {{ secondUser }} are typing...": "{{ firstUser }} e {{ secondUser }} stanno scrivendo...",
-	"{{ imageCount }} more": "+ {{ imageCount }}",
+	"{{ commaSeparatedUsers }} and {{ lastUser }} are typing...": "",
+	"{{ commaSeparatedUsers }} and {{ moreCount }} more": "",
+	"{{ commaSeparatedUsers }}, and {{ lastUser }}": "",
+	"{{ firstUser }} and {{ secondUser }}": "",
+	"{{ firstUser }} and {{ secondUser }} are typing...": "",
+	"{{ imageCount }} more": "",
 	"{{ memberCount }} members": "{{ memberCount }} membri",
-	"{{ replyCount }} replies": "{{ replyCount }} risposte",
-	"{{ user }} has been muted": "{{ user }} é stato silenziato",
-	"{{ user }} has been unmuted": "Notifiche riattivate per {{ user }}",
-	"{{ user }} is typing...": "{{ user }} sta scrivendo...",
+	"{{ replyCount }} replies": "",
+	"{{ user }} has been muted": "",
+	"{{ user }} has been unmuted": "",
+	"{{ user }} is typing...": "",
 	"{{ watcherCount }} online": "{{ watcherCount }} online",
 	"🏙 Attachment...": "🏙 Allegato..."
 };
@@ -2834,7 +2831,7 @@ var ReactTextareaAutocomplete = /*#__PURE__*/function (_React$Component) {
       var hasFocus = _this.textareaRef.matches(':focus'); // don't submit if the element has focus or the shift key is pressed, or it's a mobile browser
 
 
-      if (!hasFocus || event.shiftKey === true || _this.props.skipSubmitOnEnter && isMobile) return;
+      if (!hasFocus || event.shiftKey === true || _this.props.skipSubmitOnEnter) return;
 
       if (!trigger || !_this.state.data) {
         // trigger a submit
@@ -5975,6 +5972,7 @@ var MessageInputLarge = function MessageInputLarge(props) {
     commands: messageInput.getCommands(),
     innerRef: messageInput.textareaRef,
     handleSubmit: messageInput.handleSubmit,
+    skipSubmitOnEnter: props.skipSubmitOnEnter,
     onChange: messageInput.handleChange,
     onSelectItem: messageInput.onSelectItem,
     value: messageInput.text,
@@ -6090,7 +6088,8 @@ MessageInputLarge.propTypes = {
   /** Optional UI component prop to override the default List component that displays suggestions */
   SuggestionList:
   /** @type {PropTypes.Validator<React.ElementType<import('../types').SuggestionListProps>>} */
-  PropTypes.elementType
+  PropTypes.elementType,
+  skipSubmitOnEnter: PropTypes.bool
 };
 MessageInputLarge.defaultProps = {
   focus: false,
@@ -6150,6 +6149,7 @@ var MessageInputFlat = function MessageInputFlat(props) {
     commands: messageInput.getCommands(),
     innerRef: messageInput.textareaRef,
     handleSubmit: messageInput.handleSubmit,
+    skipSubmitOnEnter: props.skipSubmitOnEnter,
     onSelectItem: messageInput.onSelectItem,
     onChange: messageInput.handleChange,
     value: messageInput.text,
@@ -6256,7 +6256,8 @@ MessageInputFlat.propTypes = {
   /** Optional UI component prop to override the default List component that displays suggestions */
   SuggestionList:
   /** @type {PropTypes.Validator<React.ElementType<import('../types').SuggestionListProps>>} */
-  PropTypes.elementType
+  PropTypes.elementType,
+  skipSubmitOnEnter: PropTypes.bool
 };
 MessageInputFlat.defaultProps = {
   focus: false,
@@ -6300,6 +6301,7 @@ var MessageInputSmall = function MessageInputSmall(props) {
     commands: messageInput.getCommands(),
     innerRef: messageInput.textareaRef,
     handleSubmit: messageInput.handleSubmit,
+    skipSubmitOnEnter: props.skipSubmitOnEnter,
     onChange: messageInput.handleChange,
     value: messageInput.text,
     rows: 1,
@@ -6406,7 +6408,8 @@ MessageInputSmall.propTypes = {
   /** Optional UI component prop to override the default List component that displays suggestions */
   SuggestionList:
   /** @type {PropTypes.Validator<React.ElementType<import('../types').SuggestionListProps>>} */
-  PropTypes.elementType
+  PropTypes.elementType,
+  skipSubmitOnEnter: PropTypes.bool
 };
 MessageInputSmall.defaultProps = {
   focus: false,
@@ -6440,6 +6443,7 @@ var MessageInputSimple = function MessageInputSimple(props) {
     commands: messageInput.getCommands(),
     innerRef: messageInput.textareaRef,
     handleSubmit: messageInput.handleSubmit,
+    skipSubmitOnEnter: props.skipSubmitOnEnter,
     onSelectItem: messageInput.onSelectItem,
     onChange: messageInput.handleChange,
     value: messageInput.text,
@@ -6527,7 +6531,8 @@ MessageInputSimple.propTypes = {
   /** Optional UI component prop to override the default List component that displays suggestions */
   SuggestionList:
   /** @type {PropTypes.Validator<React.ElementType<import('../types').SuggestionListProps>>} */
-  PropTypes.elementType
+  PropTypes.elementType,
+  skipSubmitOnEnter: PropTypes.bool
 };
 MessageInputSimple.defaultProps = {
   focus: false,
@@ -6579,6 +6584,7 @@ var EditMessageForm = function EditMessageForm(props) {
     commands: messageInput.getCommands(),
     innerRef: messageInput.textareaRef,
     handleSubmit: messageInput.handleSubmit,
+    skipSubmitOnEnter: props.skipSubmitOnEnter,
     onChange: messageInput.handleChange,
     onSelectItem: messageInput.onSelectItem,
     placeholder: t('Type your message'),
@@ -6675,7 +6681,8 @@ EditMessageForm.propTypes = {
   /**
    * Clears edit state for current message (passed down from message component)
    */
-  clearEditingState: PropTypes.func
+  clearEditingState: PropTypes.func,
+  skipSubmitOnEnter: PropTypes.bool
 };
 EditMessageForm.defaultProps = {
   focus: false,
@@ -15274,5 +15281,5 @@ Window.propTypes = {
 };
 var Window$1 = /*#__PURE__*/React.memo(Window);
 
-export { Attachment, DefaultAttachmentActions as AttachmentActions, DefaultAudio as Audio, ReactTextareaAutocomplete as AutoCompleteTextarea, Avatar, DefaultCard as Card, Channel$1 as Channel, ChannelContext, ChannelHeader$1 as ChannelHeader, ChannelList$1 as ChannelList, ChannelListMessenger, ChannelListTeam, ChannelPreview, ChannelPreviewCompact$1 as ChannelPreviewCompact, ChannelPreviewCountOnly$1 as ChannelPreviewCountOnly, ChannelPreviewLastMessage$1 as ChannelPreviewLastMessage, ChannelPreviewMessenger$1 as ChannelPreviewMessenger, ChannelSearch$1 as ChannelSearch, Chat, ChatAutoComplete$1 as ChatAutoComplete, ChatContext, ChatDown$1 as ChatDown, CommandItem$1 as CommandItem, ConnectionStatus$1 as ConnectionStatus, DefaultDateSeparator as DateSeparator, EditMessageForm, EmojiPicker, EmoticonItem$1 as EmoticonItem, DefaultEmptyStateIndicator as EmptyStateIndicator, EventComponent$1 as EventComponent, DefaultFile as FileAttachment, FixedHeightMessage$1 as FixedHeightMessage, Gallery$1 as Gallery, ImageComponent, InfiniteScroll, InfiniteScrollPaginator, Item, KEY_CODES, List, DefaultLoadMoreButton as LoadMoreButton, LoadMorePaginator$1 as LoadMorePaginator, LoadingChannels$1 as LoadingChannels, DefaultLoadingErrorIndicator as LoadingErrorIndicator, DefaultLoadingIndicator as LoadingIndicator, MESSAGE_ACTIONS, Message$1 as Message, MessageActions, MessageActionsBox$1 as MessageActionsBox, MessageCommerce$1 as MessageCommerce, MessageDeleted, MessageInput$1 as MessageInput, MessageInputFlat, MessageInputLarge, MessageInputSimple, MessageInputSmall, MessageList$1 as MessageList, MessageLivestream, MessageNotification$1 as MessageNotification, MessageOptions, MessagePropTypes, MessageRepliesCountButton$1 as MessageRepliesCountButton, MessageSimple$1 as MessageSimple, MessageTeam$1 as MessageTeam, MessageText, Modal, ModalImage, ModalComponent as ModalWrapper, DefaultReactionSelector as ReactionSelector, DefaultReactionsList as ReactionsList, ReverseInfiniteScroll, SafeAnchor$1 as SafeAnchor, SendButton, DefaultReactionsList$1 as SimpleReactionsList, Streami18n, Thread$7 as Thread, Tooltip$1 as Tooltip, TranslationContext, DefaultTypingIndicator as TypingIndicator, UploadsPreview, UserItem$1 as UserItem, VirtualizedMessageListWithContext as VirtualizedMessageList, Window$1 as Window, areMessagePropsEqual, byDate, checkChannelPropType, checkClientPropType, commonEmoji, defaultMinimalEmojis, defaultPinPermissions, defaultScrollToItem, emojiData, emojiSetDef, enTranslations, frTranslations, generateRandomId, getImages, getMessageActions, getNonImageAttachments, getReadByTooltipText, handleActionWarning, hiTranslations, isMobile, isOnlyEmojis, isPromise, isUserMuted, itTranslations, Listeners as listener, messageHasAttachments, messageHasReactions, missingUseFlagHandlerParameterWarning, missingUseMuteHandlerParamsWarning, nlTranslations, reactionHandlerWarning, renderText, ruTranslations, shouldMessageComponentUpdate, smartRender, trTranslations, truncate, useActionHandler, useEditMessageHandler as useChannelEditMessageHandler, useMentionsHandlers as useChannelMentionsHandler, useDeleteHandler, useEditHandler, useFlagHandler, useMentionsHandler, useMentionsUIHandler, useMessageInput, useMuteHandler, useOpenThreadHandler, usePinHandler, useReactionClick, useReactionHandler, useRetryHandler, useUserHandler, useUserRole, validateAndGetMessage, withChannelContext, withChatContext, withTranslationContext };
+export { Attachment, DefaultAttachmentActions as AttachmentActions, DefaultAudio as Audio, ReactTextareaAutocomplete as AutoCompleteTextarea, Avatar, DefaultCard as Card, Channel$1 as Channel, ChannelContext, ChannelHeader$1 as ChannelHeader, ChannelList$1 as ChannelList, ChannelListMessenger, ChannelListTeam, ChannelPreview, ChannelPreviewCompact$1 as ChannelPreviewCompact, ChannelPreviewCountOnly$1 as ChannelPreviewCountOnly, ChannelPreviewLastMessage$1 as ChannelPreviewLastMessage, ChannelPreviewMessenger$1 as ChannelPreviewMessenger, ChannelSearch$1 as ChannelSearch, Chat, ChatAutoComplete$1 as ChatAutoComplete, ChatContext, ChatDown$1 as ChatDown, CommandItem$1 as CommandItem, ConnectionStatus$1 as ConnectionStatus, DefaultDateSeparator as DateSeparator, EditMessageForm, EmojiPicker, EmoticonItem$1 as EmoticonItem, DefaultEmptyStateIndicator as EmptyStateIndicator, EventComponent$1 as EventComponent, DefaultFile as FileAttachment, FixedHeightMessage$1 as FixedHeightMessage, Gallery$1 as Gallery, ImageComponent, InfiniteScroll, InfiniteScrollPaginator, Item, KEY_CODES, List, DefaultLoadMoreButton as LoadMoreButton, LoadMorePaginator$1 as LoadMorePaginator, LoadingChannels$1 as LoadingChannels, DefaultLoadingErrorIndicator as LoadingErrorIndicator, DefaultLoadingIndicator as LoadingIndicator, MESSAGE_ACTIONS, Message$1 as Message, MessageActions, MessageActionsBox$1 as MessageActionsBox, MessageCommerce$1 as MessageCommerce, MessageDeleted, MessageInput$1 as MessageInput, MessageInputFlat, MessageInputLarge, MessageInputSimple, MessageInputSmall, MessageList$1 as MessageList, MessageLivestream, MessageNotification$1 as MessageNotification, MessageOptions, MessagePropTypes, MessageRepliesCountButton$1 as MessageRepliesCountButton, MessageSimple$1 as MessageSimple, MessageTeam$1 as MessageTeam, MessageText, Modal, ModalImage, ModalComponent as ModalWrapper, DefaultReactionSelector as ReactionSelector, DefaultReactionsList as ReactionsList, ReverseInfiniteScroll, SafeAnchor$1 as SafeAnchor, SendButton, DefaultReactionsList$1 as SimpleReactionsList, Streami18n, Thread$7 as Thread, Tooltip$1 as Tooltip, TranslationContext, DefaultTypingIndicator as TypingIndicator, UploadsPreview, UserItem$1 as UserItem, VirtualizedMessageListWithContext as VirtualizedMessageList, Window$1 as Window, areMessagePropsEqual, byDate, checkChannelPropType, checkClientPropType, commonEmoji, defaultMinimalEmojis, defaultPinPermissions, defaultScrollToItem, emojiData, emojiSetDef, enTranslations, frTranslations, generateRandomId, getImages, getMessageActions, getNonImageAttachments, getReadByTooltipText, handleActionWarning, hiTranslations, isOnlyEmojis, isPromise, isUserMuted, itTranslations, Listeners as listener, messageHasAttachments, messageHasReactions, missingUseFlagHandlerParameterWarning, missingUseMuteHandlerParamsWarning, nlTranslations, reactionHandlerWarning, renderText, ruTranslations, shouldMessageComponentUpdate, smartRender, trTranslations, truncate, useActionHandler, useEditMessageHandler as useChannelEditMessageHandler, useMentionsHandlers as useChannelMentionsHandler, useDeleteHandler, useEditHandler, useFlagHandler, useMentionsHandler, useMentionsUIHandler, useMessageInput, useMuteHandler, useOpenThreadHandler, usePinHandler, useReactionClick, useReactionHandler, useRetryHandler, useUserHandler, useUserRole, validateAndGetMessage, withChannelContext, withChatContext, withTranslationContext };
 //# sourceMappingURL=index.es.js.map

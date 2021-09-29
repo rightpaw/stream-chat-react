@@ -58,6 +58,7 @@ const EditMessageForm = (props) => {
             commands={messageInput.getCommands()}
             innerRef={messageInput.textareaRef}
             handleSubmit={messageInput.handleSubmit}
+            skipSubmitOnEnter={props.skipSubmitOnEnter}
             onChange={messageInput.handleChange}
             onSelectItem={messageInput.onSelectItem}
             placeholder={t('Type your message')}
@@ -156,6 +157,7 @@ EditMessageForm.propTypes = {
    * Clears edit state for current message (passed down from message component)
    */
   clearEditingState: PropTypes.func,
+  skipSubmitOnEnter: PropTypes.bool,
 };
 
 EditMessageForm.defaultProps = {
