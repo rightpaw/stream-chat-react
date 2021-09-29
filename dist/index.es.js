@@ -9,6 +9,7 @@ import RootReactMarkdown from 'react-markdown';
 import ReactMarkdown from 'react-markdown/with-html';
 import data from 'emoji-mart/data/all.json';
 import { find } from 'linkifyjs';
+import MobileDetect from 'mobile-detect';
 import _regeneratorRuntime from '@babel/runtime/regenerator';
 import _asyncToGenerator from '@babel/runtime/helpers/asyncToGenerator';
 import _classCallCheck from '@babel/runtime/helpers/classCallCheck';
@@ -384,6 +385,8 @@ var checkClientPropType = function checkClientPropType(propValue, _, componentNa
 
   return null;
 };
+var mobileDetect = new MobileDetect(window.navigator.userAgent);
+var isMobile = !!mobileDetect.mobile();
 
 var Cancel = "Cancel";
 var Close = "Close";
@@ -2828,10 +2831,10 @@ var ReactTextareaAutocomplete = /*#__PURE__*/function (_React$Component) {
       if (!_this.textareaRef) return;
       var trigger = _this.state.currentTrigger;
 
-      var hasFocus = _this.textareaRef.matches(':focus'); // don't submit if the element has focus or the shift key is pressed
+      var hasFocus = _this.textareaRef.matches(':focus'); // don't submit if the element has focus or the shift key is pressed, or it's a mobile browser
 
 
-      if (!hasFocus || event.shiftKey === true) return;
+      if (!hasFocus || event.shiftKey === true || _this.props.skipSubmitOnEnter && isMobile) return;
 
       if (!trigger || !_this.state.data) {
         // trigger a submit
@@ -3444,7 +3447,10 @@ ReactTextareaAutocomplete.propTypes = {
   style: PropTypes.object,
   SuggestionList: PropTypes.elementType,
   trigger: triggerPropsCheck,
-  value: PropTypes.string
+  value: PropTypes.string,
+
+  /** Whether to skip calling handleSubmit on enter */
+  skipSubmitOnEnter: PropTypes.bool
 };
 
 /**
@@ -4731,6 +4737,7 @@ var ChatAutoComplete = function ChatAutoComplete(props) {
     placeholder: props.placeholder,
     onChange: props.onChange,
     handleSubmit: props.handleSubmit,
+    skipSubmitOnEnter: props.skipSubmitOnEnter,
     onPaste: props.onPaste,
     value: props.value,
     grow: props.grow,
@@ -4765,6 +4772,9 @@ ChatAutoComplete.propTypes = {
 
   /** Function that runs on submit */
   handleSubmit: PropTypes.func,
+
+  /** Whether to skip calling handleSubmit on enter */
+  skipSubmitOnEnter: PropTypes.bool,
 
   /** Function that runs on change */
   onChange: PropTypes.func,
@@ -15264,5 +15274,5 @@ Window.propTypes = {
 };
 var Window$1 = /*#__PURE__*/React.memo(Window);
 
-export { Attachment, DefaultAttachmentActions as AttachmentActions, DefaultAudio as Audio, ReactTextareaAutocomplete as AutoCompleteTextarea, Avatar, DefaultCard as Card, Channel$1 as Channel, ChannelContext, ChannelHeader$1 as ChannelHeader, ChannelList$1 as ChannelList, ChannelListMessenger, ChannelListTeam, ChannelPreview, ChannelPreviewCompact$1 as ChannelPreviewCompact, ChannelPreviewCountOnly$1 as ChannelPreviewCountOnly, ChannelPreviewLastMessage$1 as ChannelPreviewLastMessage, ChannelPreviewMessenger$1 as ChannelPreviewMessenger, ChannelSearch$1 as ChannelSearch, Chat, ChatAutoComplete$1 as ChatAutoComplete, ChatContext, ChatDown$1 as ChatDown, CommandItem$1 as CommandItem, ConnectionStatus$1 as ConnectionStatus, DefaultDateSeparator as DateSeparator, EditMessageForm, EmojiPicker, EmoticonItem$1 as EmoticonItem, DefaultEmptyStateIndicator as EmptyStateIndicator, EventComponent$1 as EventComponent, DefaultFile as FileAttachment, FixedHeightMessage$1 as FixedHeightMessage, Gallery$1 as Gallery, ImageComponent, InfiniteScroll, InfiniteScrollPaginator, Item, KEY_CODES, List, DefaultLoadMoreButton as LoadMoreButton, LoadMorePaginator$1 as LoadMorePaginator, LoadingChannels$1 as LoadingChannels, DefaultLoadingErrorIndicator as LoadingErrorIndicator, DefaultLoadingIndicator as LoadingIndicator, MESSAGE_ACTIONS, Message$1 as Message, MessageActions, MessageActionsBox$1 as MessageActionsBox, MessageCommerce$1 as MessageCommerce, MessageDeleted, MessageInput$1 as MessageInput, MessageInputFlat, MessageInputLarge, MessageInputSimple, MessageInputSmall, MessageList$1 as MessageList, MessageLivestream, MessageNotification$1 as MessageNotification, MessageOptions, MessagePropTypes, MessageRepliesCountButton$1 as MessageRepliesCountButton, MessageSimple$1 as MessageSimple, MessageTeam$1 as MessageTeam, MessageText, Modal, ModalImage, ModalComponent as ModalWrapper, DefaultReactionSelector as ReactionSelector, DefaultReactionsList as ReactionsList, ReverseInfiniteScroll, SafeAnchor$1 as SafeAnchor, SendButton, DefaultReactionsList$1 as SimpleReactionsList, Streami18n, Thread$7 as Thread, Tooltip$1 as Tooltip, TranslationContext, DefaultTypingIndicator as TypingIndicator, UploadsPreview, UserItem$1 as UserItem, VirtualizedMessageListWithContext as VirtualizedMessageList, Window$1 as Window, areMessagePropsEqual, byDate, checkChannelPropType, checkClientPropType, commonEmoji, defaultMinimalEmojis, defaultPinPermissions, defaultScrollToItem, emojiData, emojiSetDef, enTranslations, frTranslations, generateRandomId, getImages, getMessageActions, getNonImageAttachments, getReadByTooltipText, handleActionWarning, hiTranslations, isOnlyEmojis, isPromise, isUserMuted, itTranslations, Listeners as listener, messageHasAttachments, messageHasReactions, missingUseFlagHandlerParameterWarning, missingUseMuteHandlerParamsWarning, nlTranslations, reactionHandlerWarning, renderText, ruTranslations, shouldMessageComponentUpdate, smartRender, trTranslations, truncate, useActionHandler, useEditMessageHandler as useChannelEditMessageHandler, useMentionsHandlers as useChannelMentionsHandler, useDeleteHandler, useEditHandler, useFlagHandler, useMentionsHandler, useMentionsUIHandler, useMessageInput, useMuteHandler, useOpenThreadHandler, usePinHandler, useReactionClick, useReactionHandler, useRetryHandler, useUserHandler, useUserRole, validateAndGetMessage, withChannelContext, withChatContext, withTranslationContext };
+export { Attachment, DefaultAttachmentActions as AttachmentActions, DefaultAudio as Audio, ReactTextareaAutocomplete as AutoCompleteTextarea, Avatar, DefaultCard as Card, Channel$1 as Channel, ChannelContext, ChannelHeader$1 as ChannelHeader, ChannelList$1 as ChannelList, ChannelListMessenger, ChannelListTeam, ChannelPreview, ChannelPreviewCompact$1 as ChannelPreviewCompact, ChannelPreviewCountOnly$1 as ChannelPreviewCountOnly, ChannelPreviewLastMessage$1 as ChannelPreviewLastMessage, ChannelPreviewMessenger$1 as ChannelPreviewMessenger, ChannelSearch$1 as ChannelSearch, Chat, ChatAutoComplete$1 as ChatAutoComplete, ChatContext, ChatDown$1 as ChatDown, CommandItem$1 as CommandItem, ConnectionStatus$1 as ConnectionStatus, DefaultDateSeparator as DateSeparator, EditMessageForm, EmojiPicker, EmoticonItem$1 as EmoticonItem, DefaultEmptyStateIndicator as EmptyStateIndicator, EventComponent$1 as EventComponent, DefaultFile as FileAttachment, FixedHeightMessage$1 as FixedHeightMessage, Gallery$1 as Gallery, ImageComponent, InfiniteScroll, InfiniteScrollPaginator, Item, KEY_CODES, List, DefaultLoadMoreButton as LoadMoreButton, LoadMorePaginator$1 as LoadMorePaginator, LoadingChannels$1 as LoadingChannels, DefaultLoadingErrorIndicator as LoadingErrorIndicator, DefaultLoadingIndicator as LoadingIndicator, MESSAGE_ACTIONS, Message$1 as Message, MessageActions, MessageActionsBox$1 as MessageActionsBox, MessageCommerce$1 as MessageCommerce, MessageDeleted, MessageInput$1 as MessageInput, MessageInputFlat, MessageInputLarge, MessageInputSimple, MessageInputSmall, MessageList$1 as MessageList, MessageLivestream, MessageNotification$1 as MessageNotification, MessageOptions, MessagePropTypes, MessageRepliesCountButton$1 as MessageRepliesCountButton, MessageSimple$1 as MessageSimple, MessageTeam$1 as MessageTeam, MessageText, Modal, ModalImage, ModalComponent as ModalWrapper, DefaultReactionSelector as ReactionSelector, DefaultReactionsList as ReactionsList, ReverseInfiniteScroll, SafeAnchor$1 as SafeAnchor, SendButton, DefaultReactionsList$1 as SimpleReactionsList, Streami18n, Thread$7 as Thread, Tooltip$1 as Tooltip, TranslationContext, DefaultTypingIndicator as TypingIndicator, UploadsPreview, UserItem$1 as UserItem, VirtualizedMessageListWithContext as VirtualizedMessageList, Window$1 as Window, areMessagePropsEqual, byDate, checkChannelPropType, checkClientPropType, commonEmoji, defaultMinimalEmojis, defaultPinPermissions, defaultScrollToItem, emojiData, emojiSetDef, enTranslations, frTranslations, generateRandomId, getImages, getMessageActions, getNonImageAttachments, getReadByTooltipText, handleActionWarning, hiTranslations, isMobile, isOnlyEmojis, isPromise, isUserMuted, itTranslations, Listeners as listener, messageHasAttachments, messageHasReactions, missingUseFlagHandlerParameterWarning, missingUseMuteHandlerParamsWarning, nlTranslations, reactionHandlerWarning, renderText, ruTranslations, shouldMessageComponentUpdate, smartRender, trTranslations, truncate, useActionHandler, useEditMessageHandler as useChannelEditMessageHandler, useMentionsHandlers as useChannelMentionsHandler, useDeleteHandler, useEditHandler, useFlagHandler, useMentionsHandler, useMentionsUIHandler, useMessageInput, useMuteHandler, useOpenThreadHandler, usePinHandler, useReactionClick, useReactionHandler, useRetryHandler, useUserHandler, useUserRole, validateAndGetMessage, withChannelContext, withChatContext, withTranslationContext };
 //# sourceMappingURL=index.es.js.map

@@ -13,6 +13,7 @@ var RootReactMarkdown = require('react-markdown');
 var ReactMarkdown = require('react-markdown/with-html');
 var data = require('emoji-mart/data/all.json');
 var linkify = require('linkifyjs');
+var MobileDetect = require('mobile-detect');
 var _regeneratorRuntime = require('@babel/runtime/regenerator');
 var _asyncToGenerator = require('@babel/runtime/helpers/asyncToGenerator');
 var _classCallCheck = require('@babel/runtime/helpers/classCallCheck');
@@ -67,6 +68,7 @@ var emojiRegex__default = /*#__PURE__*/_interopDefaultLegacy(emojiRegex);
 var RootReactMarkdown__default = /*#__PURE__*/_interopDefaultLegacy(RootReactMarkdown);
 var ReactMarkdown__default = /*#__PURE__*/_interopDefaultLegacy(ReactMarkdown);
 var data__default = /*#__PURE__*/_interopDefaultLegacy(data);
+var MobileDetect__default = /*#__PURE__*/_interopDefaultLegacy(MobileDetect);
 var _regeneratorRuntime__default = /*#__PURE__*/_interopDefaultLegacy(_regeneratorRuntime);
 var _asyncToGenerator__default = /*#__PURE__*/_interopDefaultLegacy(_asyncToGenerator);
 var _classCallCheck__default = /*#__PURE__*/_interopDefaultLegacy(_classCallCheck);
@@ -428,6 +430,8 @@ var checkClientPropType = function checkClientPropType(propValue, _, componentNa
 
   return null;
 };
+var mobileDetect = new MobileDetect__default['default'](window.navigator.userAgent);
+var isMobile = !!mobileDetect.mobile();
 
 var Cancel = "Cancel";
 var Close = "Close";
@@ -2872,10 +2876,10 @@ var ReactTextareaAutocomplete = /*#__PURE__*/function (_React$Component) {
       if (!_this.textareaRef) return;
       var trigger = _this.state.currentTrigger;
 
-      var hasFocus = _this.textareaRef.matches(':focus'); // don't submit if the element has focus or the shift key is pressed
+      var hasFocus = _this.textareaRef.matches(':focus'); // don't submit if the element has focus or the shift key is pressed, or it's a mobile browser
 
 
-      if (!hasFocus || event.shiftKey === true) return;
+      if (!hasFocus || event.shiftKey === true || _this.props.skipSubmitOnEnter && isMobile) return;
 
       if (!trigger || !_this.state.data) {
         // trigger a submit
@@ -3488,7 +3492,10 @@ ReactTextareaAutocomplete.propTypes = {
   style: PropTypes__default['default'].object,
   SuggestionList: PropTypes__default['default'].elementType,
   trigger: triggerPropsCheck,
-  value: PropTypes__default['default'].string
+  value: PropTypes__default['default'].string,
+
+  /** Whether to skip calling handleSubmit on enter */
+  skipSubmitOnEnter: PropTypes__default['default'].bool
 };
 
 /**
@@ -4775,6 +4782,7 @@ var ChatAutoComplete = function ChatAutoComplete(props) {
     placeholder: props.placeholder,
     onChange: props.onChange,
     handleSubmit: props.handleSubmit,
+    skipSubmitOnEnter: props.skipSubmitOnEnter,
     onPaste: props.onPaste,
     value: props.value,
     grow: props.grow,
@@ -4809,6 +4817,9 @@ ChatAutoComplete.propTypes = {
 
   /** Function that runs on submit */
   handleSubmit: PropTypes__default['default'].func,
+
+  /** Whether to skip calling handleSubmit on enter */
+  skipSubmitOnEnter: PropTypes__default['default'].bool,
 
   /** Function that runs on change */
   onChange: PropTypes__default['default'].func,
@@ -15409,6 +15420,7 @@ exports.getNonImageAttachments = getNonImageAttachments;
 exports.getReadByTooltipText = getReadByTooltipText;
 exports.handleActionWarning = handleActionWarning;
 exports.hiTranslations = hiTranslations;
+exports.isMobile = isMobile;
 exports.isOnlyEmojis = isOnlyEmojis;
 exports.isPromise = isPromise;
 exports.isUserMuted = isUserMuted;
