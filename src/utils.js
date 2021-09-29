@@ -280,7 +280,3 @@ export const checkClientPropType = (propValue, _, componentName) => {
   }
   return null;
 };
-
-const mobileDetect = new MobileDetect(window.navigator.userAgent);
-
-export const isMobile = !!mobileDetect.mobile();

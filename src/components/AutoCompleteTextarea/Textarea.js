@@ -13,7 +13,6 @@ import {
   errorMessage,
   triggerPropsCheck,
 } from './utils';
-import { isMobile } from '../../utils';
 
 class ReactTextareaAutocomplete extends React.Component {
   static defaultProps = {
@@ -122,11 +121,7 @@ class ReactTextareaAutocomplete extends React.Component {
     const hasFocus = this.textareaRef.matches(':focus');
 
     // don't submit if the element has focus or the shift key is pressed, or it's a mobile browser
-    if (
-      !hasFocus ||
-      event.shiftKey === true ||
-      (this.props.skipSubmitOnEnter && isMobile)
-    )
+    if (!hasFocus || event.shiftKey === true || this.props.skipSubmitOnEnter)
       return;
 
     if (!trigger || !this.state.data) {
